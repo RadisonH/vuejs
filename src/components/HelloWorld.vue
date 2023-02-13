@@ -1,24 +1,15 @@
 <template>
   <h1>{{ msg }}</h1>
 
-<!-- My custom code -->
-<button class="outsideBtn" v-on:click="duplicate">Duplicate</button>
-<button class="outsideBtn" v-on:click="background">Background</button>
-<button class="outsideBtn" v-on:click="heading">Heading</button>
-<button class="outsideBtn" v-on:click="deleter">Delete</button>
-
-<div class="card" v-on:mouseover="hoover">
-  <h1 class="title">Chad of Cyber IST</h1>
-
-  <img class="giaImg" src="https://media.discordapp.net/attachments/963095262363017246/1020131830323744788/unknown.png?width=468&height=468" alt="Professor Giacobe">
-  
-<div class="textbox">
-  <details>
-    <summary class="haxbtn">Details</summary>
-    <p class="description pScale">Professor Giacobe may look like a simple man but perceptions can be misleading. Underneath the facade of a simple college of IST professor lies the holiness of an <strong>IST GOD</strong>!</p>
-  </details>
-
-  </div>
+<div class="card" style="width: 400px;">
+  <h2 class="card-title">Let Him Cook!</h2>
+  <img src="https://i.kym-cdn.com/entries/icons/facebook/000/041/943/1aa1blank.jpg" alt="image" style="width: 70%; height: auto;">
+  <p class="card-description">Woody holding Sora back to let someone cook</p>
+  <button class="dup-button" id="dup-imgbutton">Duplicate Card</button>
+  <button class="toggle-button" id="toggle-imgbutton">Toggle Color</button>
+  <button class="changeText-button" id="changeText-imgbutton">Change Text</button>
+  <button class="del-button" id="del-imgbutton">Delete</button>
+  <button class="details-button" id="details-imgbutton">Details</button>
 </div>
 
 
@@ -83,16 +74,7 @@ export default {
       });
     },
 
-    heading() {
-      document.querySelectorAll(".title").forEach((item) => {   
-        if(item.innerHTML=="something else"){
-          item.innerHTML="Chad of Cyber IST";
-        }
-        else{
-          item.innerHTML="something else";
-        }
-      });
-    },
+    
 
     //Kinda borked rn
     deleter(){
